@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>JQuery Concepts | Web Scripting Showcase Project | Franklin Farahani</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prettify.min.css">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<!-- Loading the prettify.js plugin for the code segments, as well as setting the background gradient -->
+
+<body onload="PR.prettyPrint()" class="grad_peach">
+
+    <!-- NAVIGATION -->
+    <nav class="grey darken-4" role="navigation">
+        <div class="nav-wrapper container">
+
+            <!-- LOGO CONTAINER -->
+            <a href="page3.html">
+                <div id="logo-container">
+                    <div class="svg_container">
+                        <div class="logo_ff"></div>
+                    </div>
+                    FRANKLIN FARAHANI
+                </div>
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <ul class="right hide-on-med-and-down">
+                <li><a href="page1.html">Javascript Concepts</a></li>
+                <li class="active"><a href="page2.html">JQuery Concepts</a></li>
+            </ul>
+
+            <!-- MOBILE MENU -->
+            <ul id="nav-mobile" class="side-nav">
+                <li><span>MENU</span></li>
+                <li><a href="page1.html">Javascript Concepts</a></li>
+                <li><a href="page2.html">JQuery Concepts</a></li>
+            </ul>
+
+            <!-- MAKE IT RESPONSIVE -->
+            <!-- calls the sideNav method -->
+            <a href="#" data-activates="nav-mobile" class="right button-collapse"><i class="material-icons">menu</i></a>
+
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="container valign-wrapper" id="footer_enabler">
+        <!-- Limiting the width of the card to a more readable state with the opt_width class-->
+        <div class="opt_width valign">
+            <!-- defining a card with tabs -->
+            <div class="card">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#tab1">Selectors</a></li>
+                        <li class="tab"><a href="#tab2">Get &amp; Set Actions</a></li>
+                        <li class="tab"><a href="#tab3">Effects</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                    <div id="tab1">
+                        <!-- FIRST TAB'S CONTENT -->
+                        <h5>JQuery Selectors</h5>
+                        <p>JQuery is a JavaScript library that makes various tasks much easier by turning them into single statements. It also facilitates easy sharing of common effects and functionalities.</p>
+                        <p> However, first you would need to be able to select the elements. JQuery's syntax for selectors is very similar to CSS selectors. Here some common selectors:</p>
+
+                        <table class="highlight responsive-table">
+                            <caption align="bottom">Source: <a href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp">W3 Schools</a></caption>
+                            <thead>
+                                <tr>
+                                    <th>Selector</th>
+                                    <th>Example</th>
+                                    <th>Selects</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><span class="inline_code">*</span></td>
+                                    <td><span class="inline_code">$("*")</span></td>
+                                    <td>All elements</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="inline_code">#id</span></td>
+                                    <td><span class="inline_code">$("#lastname")</span></td>
+                                    <td>The element with <span class="inline_code">id="lastname"</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="inline_code">.class</span></td>
+                                    <td><span class="inline_code">$(".intro")</span></td>
+                                    <td>All elements with <span class="inline_code">class="intro"</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="inline_code">.class,.class</span></td>
+                                    <td><span class="inline_code">$(".intro,.demo")</span></td>
+                                    <td>All elements with the class "intro" or "demo"</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="inline_code">element</span></td>
+                                    <td><span class="inline_code">$("p")</span></td>
+                                    <td>All <span class="inline_code">&lt;p&gt;</span> elements</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="inline_code">el1,el2,el3</span></td>
+                                    <td><span class="inline_code">$("h1,div,p")</span></td>
+                                    <td>All <span class="inline_code">&lt;h1&gt;</span>, <span class="inline_code">&lt;div&gt;</span> and <span class="inline_code">&lt;p&gt;</span> elements</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div id="tab2">
+                        <!-- SECOND TAB'S CONTENT -->
+                        <h5>Getting &amp; Setting Content</h5> Getting and setting items using JQuery is done through three methods:
+                        <ul class="browser-default">
+                            <li><span class="inline_code">val()</span>: Gets or sets the value of fields.</li>
+                            <li><span class="inline_code">text()</span>: Gets or sets the <span class="inline_code">innerText</span> of elements.</li>
+                            <li><span class="inline_code">html()</span>: Gets or sets the <span class="inline_code">innerHTML</span> of elements.</li>
+                        </ul>
+                        <!-- Code showcase using Google's prettify.js -->
+                        <!-- code below can NOT be indented or extra spaces appear on the page -->
+                        <pre class="prettyprint lang-js">
+// Get by leaving the method parameter blank
+$("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+});
+// Set by entering an input for the method parameter
+$("#btn2").click(function(){
+    $("#test2").html("&lt;b&gt;Hello world!&lt;/b&gt;");
+});
+</pre>
+                    </div>
+                    <div id="tab3">
+                        <!-- THIRD TAB'S CONTENT -->
+                        <h5>JQuery Effects</h5> JQuery comes with several effect methods &quot;out of the box&quot; that facilitate easy transformations and animations. The most widely used of these methods are:
+                        <ul class="browser-default">
+                            <li><span class="inline_code">show()</span>,<span class="inline_code">hide()</span>: Shows or hides the element.</li>
+                            <li><span class="inline_code">fadeIn()</span>,<span class="inline_code">fadeOut()</span>: fades in or fades out the element.</li>
+                            <li><span class="inline_code">slideDown()</span>,<span class="inline_code">slideUp()</span>: Slides the element up or down.</li>
+                        </ul>
+                        These effects can be further modified with the use of two extra parameters:
+                        <ul class="browser-default">
+                            <li><span class="inline_code">speed</span>: Changes the speed of the effect and can be set to predefined values of <span class="inline_code">slow</span>, <span class="inline_code">fast</span>, or a custom number of milliseconds.</li>
+                            <li><span class="inline_code">callback</span>: Allows a callback function to be invoked after completion of the effect.</li>
+                        </ul>
+
+                        <pre class="prettyprint lang-js">
+// $(selector).fadeIn(speed,callback);
+$("button").click(function(){
+  $("#div1").hide();
+  $("#div2").fadeIn("slow");
+  $("#div3").slideUp("fast", 0.7);
+});</pre>
+
+
+                    </div> <!--#tab3 div-->
+                </div> <!--.card-content div-->
+            </div> <!--.card div-->
+
+
+        </div> <!--.opt_width div-->
+
+    </div> <!--.container div-->
+
+    <!-- FOOTER -->
+    <footer class="page-footer grey darken-4">
+        <div class="footer-copyright">
+            <div class="container center-align">
+                &copy; Frank Farahani. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Google's code-prettify for displaying code -->
+    <!-- Github: https://github.com/google/code-prettify -->
+    <script src="js/prettify.js"></script>
+
+    <!-- Materialize framework based on Google's Material Design Lite -->
+    <!-- http://materializecss.com/ -->
+    <script src="js/materialize.js"></script>
+
+    <!-- Initialization of various scripts -->
+    <script src="js/init.js"></script>
+
+</body>
+
+</html>

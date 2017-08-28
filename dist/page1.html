@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>JavaScript Concepts | Web Scripting Showcase Project | Franklin Farahani</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/prettify.min.css">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<!-- Loading the prettify.js plugin for the code segments, as well as setting the background gradient -->
+
+<body onload="PR.prettyPrint()" class="grad_peach">
+
+    <!-- NAVIGATION -->
+    <nav class="grey darken-4" role="navigation">
+        <div class="nav-wrapper container">
+
+            <!-- LOGO CONTAINER -->
+            <a href="page3.html">
+                <div id="logo-container">
+                    <div class="svg_container">
+                        <div class="logo_ff"></div>
+                    </div>
+                    FRANKLIN FARAHANI
+                </div>
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="page1.html">Javascript Concepts</a></li>
+                <li><a href="page2.html">JQuery Concepts</a></li>
+            </ul>
+
+            <!-- MOBILE MENU -->
+            <ul id="nav-mobile" class="side-nav">
+                <li><span>MENU</span></li>
+                <li><a href="page1.html">Javascript Concepts</a></li>
+                <li><a href="page2.html">JQuery Concepts</a></li>
+            </ul>
+
+            <!-- MAKE IT RESPONSIVE -->
+            <!-- calls the sideNav method -->
+            <a href="#" data-activates="nav-mobile" class="right button-collapse"><i class="material-icons">menu</i></a>
+
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="container valign-wrapper" id="footer_enabler">
+        <!-- Limiting the width of the card to a more readable state with the opt_width class-->
+        <div class="section opt_width valign">
+
+            <!-- defining a card with tabs -->
+            <div class="card">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#tab1">Functions</a></li>
+                        <li class="tab"><a href="#tab2">Arrays &amp; Collections</a></li>
+                        <li class="tab"><a href="#tab3">Conditional Structures</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                    <div id="tab1">
+                        <!-- FIRST TAB'S CONTENT -->
+                        <h5>Functions</h5> A function is a set of set of statements that performs a task. <br> There are 2 main reasons for using functions instead of writing every program as big chunks of code:
+                        <ul class="browser-default">
+                            <li><strong>Reusability:</strong> After defining a function, it can be used over and over easily. This lets programmers save significant amounts of time by reusing and sharing the same instructions without having to type them every
+                                time. </li>
+                            <li><strong>Abstraction:</strong> Using a function does not require the user to know how it works. They would just need to know how to invoke the function properly. The only time a developer needs to know how the function works
+                                is when they are either creating or modifying said function.</li>
+                        </ul>
+
+                        <!-- Code showcase using Google's prettify.js -->
+                        <!-- code below can NOT be indented or extra spaces appear on the page -->
+                        <pre class="prettyprint lang-js">
+// Defining a function
+function helloWorld() {
+  alert( 'Hello, world!' );
+}
+// Invoking a function
+helloWorld();</pre>
+                    </div>
+                    <div id="tab2">
+                        <!-- SECOND TAB'S CONTENT -->
+                        <h5>Arrays &amp; Collections</h5>
+                        <p>Arrays are a special variable type that can hold more than one item at a time.</p>
+                        <p> They are often used to store number sequences or collections of similar variables. They also make looping through similar variables significantly more accessible. In JavaScript, the items in an array can be different data types.</p>
+                        <pre class="prettyprint lang-js">
+// Declaring an array
+var colors = ["Pink", "Yellow", "Green"];
+
+// Accessing the items
+document.getElementById("apple").style.color = colors[2];</pre>
+                    </div>
+                    <div id="tab3">
+                        <!-- THIRD TAB'S CONTENT -->
+                        <h5>Conditional Structures</h5> Conditional statements are used to perform tasks based on whether specific conditions are met or not. They are important tools for controlling the flow of the code. In JavaScript, there are three main types of conditionals:
+                        <ul class="browser-default">
+                            <li><strong>Ternary Operator:</strong> The only operator that takes 3 operands and is used as a short version of an if-statement.</li>
+                            <pre class="prettyprint lang-js">
+// Syntax: condition ? expr1 : expr2
+'The apple is ' + (isRipe() ? 'Red' : 'Green');</pre>
+                            <li><strong>If-statement:</strong> The most common of the conditional statements. </li>
+                            <pre class="prettyprint lang-js">
+// Syntax: if (condition) { statements1 } else { statements2 }
+if (x > 5) {
+ /* do the thing */
+} else {
+ /* do the other thing */
+}</pre>
+                            <li><strong>switch-statement:</strong> Used to check a single condition for several possibilities. </li>
+                            <pre class="prettyprint lang-js">
+switch(expression) {
+  case p1:
+    // statements1
+    break;
+  case p2:
+  case p3:
+    // statements2
+    break;
+  default:
+    // all other situations;
+    break;
+}</pre>
+                        </ul>
+
+                    </div>
+                    <!--#tab3 div-->
+                </div>
+                <!--.card-content div-->
+            </div>
+            <!--.card div-->
+
+
+        </div> <!--.opt_width div-->
+
+    </div> <!--.container div-->
+
+    <!-- FOOTER -->
+    <footer class="page-footer grey darken-4">
+        <div class="footer-copyright">
+            <div class="container center-align">
+                &copy; Frank Farahani. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Google's code-prettify for displaying code -->
+    <!-- Github: https://github.com/google/code-prettify -->
+    <script src="js/prettify.js"></script>
+
+    <!-- Materialize framework based on Google's Material Design Lite -->
+    <!-- http://materializecss.com/ -->
+    <script src="js/materialize.js"></script>
+
+    <!-- Initialization of various scripts -->
+    <script src="js/init.js"></script>
+
+</body>
+
+</html>

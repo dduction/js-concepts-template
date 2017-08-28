@@ -1,0 +1,456 @@
+/*
+=================================
+Font Imports
+=================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+/** Ultra Light */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 300;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+/*
+=================================
+General
+=================================*/
+html {
+    font-family: "San Francisco", Roboto;
+}
+
+/* fullscreen body */
+body {
+    background-color: #fff;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    color: #999999;
+    letter-spacing: .2em;
+}
+
+p {
+    font-weight: 400;
+}
+
+/*top padding for seperating sections*/
+.section_title {
+  padding-top: 130px !important;
+}
+
+pre {
+    padding: 20px 32px;
+}
+
+/*inline code highlighter*/
+.inline_code {
+    font-family: 'Menlo', monospace;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: 0.5px solid #e0e0e0;
+}
+
+/*table row hover color*/
+table.highlight>tbody>tr:hover {
+    background-color: #e0e0e0;
+}
+
+table caption {
+    text-align: right;
+    padding-top: 3px;
+    font-size: .75em;
+}
+
+/*peach gradient background*/
+.grad_peach {
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(#00c6ff, #0072ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(#00c6ff, #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+/*peach colorizer*/
+.punct {
+  color: #FF8D6F !important;
+  font-weight: bold !important;
+}
+
+/*
+=================================
+Navigation Bar
+=================================*/
+#logo-container {
+    display: inline-block;
+    margin-left: 15px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 1px;
+}
+
+.svg_container {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
+    vertical-align: middle;
+    /* top | middle | bottom ... do what you want */
+}
+
+nav .logo_ff {
+    background: url(../img/logo.svg) no-repeat center center;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.side-nav li>span {
+    color: #FF5F6D;
+    display: block;
+    font-size: 32px;
+    font-weight: 500;
+    height: 100px;
+    line-height: 48px;
+    padding: 32px 32px;
+}
+
+
+/*
+=================================
+Footer
+=================================*/
+
+/* sticky footer */
+#footer_enabler {
+    max-width: 700px;
+    flex: 1 0 auto;
+}
+
+footer a, table caption a {
+    color: #FF5F6D;
+}
+
+footer a:hover, table caption a:hover {
+    color: #FFC371;
+}
+
+/*
+=================================
+Cards (Page 1 and 2)
+=================================*/
+
+/*Card width optimization*/
+.opt_width {
+    width: 700px;
+}
+
+.card ul li {
+    padding-bottom: 5px;
+}
+
+.card h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+.card .card-content p {
+    margin-bottom: 5px;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #0072ff;
+}
+
+.tabs .tab a {
+    color: #00c6ff;
+}
+
+.tabs .indicator {
+    background-color: #00c6ff;
+}
+
+/*
+=================================
+Splash Page
+=================================*/
+
+/* fullscreen splash */
+.splash_bg {
+    height: calc(100vh - 64px);
+    height: -o-calc(100vh - 64px);
+    /* opera */
+    height: -webkit-calc(100vh - 64px);
+    /* google, safari */
+    height: -moz-calc(100vh - 64px);
+    /* firefox */
+    z-index: -20;
+}
+
+.splash_text {
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.splash_highlight {
+    color: #FF8D6F;
+    padding: 0 10px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 0.5px solid #e0e0e0;
+}
+
+/*
+=================================
+Skill Bars
+=================================*/
+#skillbars {
+  padding-top: 40px;
+}
+
+.bar_title {
+    position: relative;
+    width: 100%;
+    color: #282828;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.bar_percent_label {
+    position: absolute;
+    right: 0;
+}
+
+.progress {
+  background-color: #cccccc;
+}
+
+.progress .determinate {
+  background-color: #FF8D6F;
+}
+
+/*
+=================================
+Portfolio
+=================================*/
+#thumbnails {
+  padding-top: 1rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+#thumbnails li {
+  padding: 0.75rem;
+  display: inline-block;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+#content {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/*
+=================================
+Timeline
+=================================*/
+section.timeline-outer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.timeline {
+  border-left: 2px dotted #999999;
+  color: #333;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  padding: 20px;
+  list-style: none;
+  text-align: left;
+}
+
+.timeline h1,
+.timeline h2,
+.timeline h3 {
+  font-size: 1.4em;
+}
+
+.timeline .event {
+  border-bottom: 3px solid rgba(160, 160, 160, 0.2);
+  padding-left: 50px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline .event p {
+  color: #777777;
+}
+
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+/*timestamps*/
+.timeline .event:before {
+  left: -10rem;
+  color: #212121;
+  content: attr(data-date);
+  text-align: right;
+  /*  font-weight: 100;*/
+
+  font-size: 1rem;
+  min-width: 120px;
+}
+
+/*circles*/
+.timeline .event:after {
+  left: -7.25px;
+  background: #404040;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  content: "";
+  top: 5px;
+}
+
+/*current circle*/
+.timeline .event:first-child:after {
+  left: -11px;
+  top: 1px;;
+  background: #FF8D6F;
+  height: 20px;
+  width: 20px;
+}
+
+/*
+=================================
+Contact
+=================================*/
+.btn {
+  background-color: #FF8D6F;
+  display: inline-block;
+  margin: 0.3em;
+  padding: 5px 30px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border: none;
+  font-size: 15px;
+  height: auto;
+  width: 200px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #FFAE70;
+}
+
+.btn:focus {
+  background-color: #FF8D6F;
+}
+
+#contact_form .btn {
+    margin: 40px 0;
+    padding: 7px 50px;
+    text-align: center;
+    width: 300px;
+}
+
+/*input form accent colors*/
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #FF5F6D;
+  box-shadow: 0 1px 0 0 #FF5F6D;
+}
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #FF5F6D;
+  box-shadow: 0 1px 0 0 #FF5F6D;
+}
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #FF5F6D;
+  box-shadow: 0 1px 0 0 #FF5F6D;
+}
